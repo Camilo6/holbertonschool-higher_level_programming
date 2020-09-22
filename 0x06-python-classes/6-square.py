@@ -3,6 +3,7 @@
 This module is from task 6
 """
 
+
 class Square:
     """
     This class defines a square based on 5-square
