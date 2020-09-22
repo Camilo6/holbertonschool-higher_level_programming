@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """This module is from task 2"""
+
+
 class Square:
-	"""This class is defines a square based in task 1"""
-	def __init__(self, size=0):
-		if not isinstance(size, int):
-			raise TypeError("size must be an integer")
-		if size < 0:
-			raise ValueError("size must be >= 0")
-		else:
-			self.__size = size
+    """This class is defines a square based in task 1"""
+    def __init__(self, size=0):
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
