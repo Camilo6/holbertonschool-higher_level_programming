@@ -1,0 +1,66 @@
+0. sum of two integers
+======================
+Function
+========
+Function that adds 2 integers.
+
+Operations
+=============================
+and b must be integers or floats, otherwise raise a TypeError exception with the message a must be an integer or b must be an integer
+
+Import module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Uses:
+
+Should return the sum of two integers:
+	>>> add_integer(10, 7)
+	17
+
+Should return an integer from the sum of a = float, b = float:
+	>>> add_integer(5.0, 3)
+	8
+
+Should return an error:
+	>>> add_integer(None, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+This function works with integers:
+
+  >>> add_integer(24, 42)
+  66
+  >>> add_integer(-24, 42)
+  18
+  >>> add_integer(-24, -42)
+  -66
+
+This function works with floats: 
+
+  >>> add_integer(2.4, 4.2)
+  6
+  >>> add_integer(-24, 4.2)
+  -20
+
+In the event that arguments are floats, they are cast as integers before addition operation:
+
+  >>> add_integer(2.456, 4.21)
+  6
+  >>> add_integer(-24.68, 4.242)
+  -20
+
+This function requires 2 arguments
+No more than 2 arguments:
+
+  >>> add_integer(2, 4, 6)
+  Traceback (most recent call last):
+  ...
+  TypeError: add_integer() takes 2 positional arguments but 3 were given
+
+No less than 2 arguments:
+
+  >>> add_integer(1)
+  Traceback (most recent call last):
+  ...
+  TypeError: add_integer() missing 1 required positional argument: 'b'
