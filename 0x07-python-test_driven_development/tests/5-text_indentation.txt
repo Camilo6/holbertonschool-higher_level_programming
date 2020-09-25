@@ -1,0 +1,25 @@
+5-text_identation
+=================
+Function
+========
+This function that prints a text with 2 new lines after
+each of these characters: ., ? and :
+
+Import module:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Uses:
+
+Use integer
+	>>> text_indentation(42)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+My name
+	>>> text_indentation("my.name.is")
+	my.
+	<BLANKLINE>
+	my.
+	<BLANKLINE>
+	name.

@@ -1,5 +1,5 @@
 4-print_square
-======================
+==============
 Function
 ========
 Function that prints a square with the character #.
