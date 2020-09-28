@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-"""This module is form task 1"""
+"""
+This module is for task 1
+"""
 
 
 class Rectangle:
-    """This class defines a rectangle"""
+    """This class defines a rectangle based on 0-rectangle"""
+
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
