@@ -6,7 +6,7 @@ This module is for task 3
 
 class Rectangle:
     """
-    This class defines a rectangle based on 2-rectangle
+    This class defines a rectangle based on task 2-rectangle
     """
     def __init__(self, width=0, height=0):
         self.__width = width
