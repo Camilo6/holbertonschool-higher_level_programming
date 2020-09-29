@@ -9,6 +9,7 @@ class Rectangle:
     This class defines a rectangle based on task 2-rectangle
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
