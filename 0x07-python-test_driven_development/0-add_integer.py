@@ -2,7 +2,7 @@
 """This module is from task 0"""
 
 
-def add_integer(a, b=98):
+def add_integer(a, b):
     """This function adds two integers"""
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
