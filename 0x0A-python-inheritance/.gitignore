@@ -1,4 +1,4 @@
-*main.c
+*main.py
 tests
 *.pyc
 .vscode
