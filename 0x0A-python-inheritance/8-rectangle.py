@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module based on task 8"""
+"""This module is from task 8"""
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
