@@ -1,0 +1,47 @@
+7. Basegeometry
+======================
+Import module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Check for module docstrings
+---------------------------
+    >>> print(__import__("7-base_geometry").__doc__) #doctest: +NORMALIZE_WHITESPACE
+    <BLANKLINE>
+    This is module 7-base_geometry
+    <BLANKLINE>
+    This module contains:
+    -one class
+    -two functions
+    <BLANKLINE>
+    Access test for this class in /tests subfolder - to run:
+    `python3 -m doctest ./tests/7-base_geometry.txt`
+    <BLANKLINE>
+
+Check for class docstring
+-------------------------
+    >>> print(__import__("7-base_geometry").BaseGeometry.__doc__) #doctest: +NORMALIZE_WHITESPACE
+    <BLANKLINE>
+    base geometry class
+    <BLANKLINE>
+    Public instance method:
+    `def area(self)`
+    `def integer_validator(self, name, value)`
+    <BLANKLINE>
+    Args:
+    name
+    value
+    Returns:
+    area of shape
+    <BLANKLINE>
+
+Check for function docstrings
+-----------------------------
+Inside class
+area
+----
+    >>> print(__import__("7-base_geometry").BaseGeometry.area.__doc__) #doctest: +NORMALIZE_WHITESPACE
+    <BLANKLINE>
+    public method to determine area
+    Raises:
+    Exception with the message
+    <BLANKLINE>
