@@ -3,6 +3,7 @@
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
 
     def __init__(self, size):
@@ -11,4 +12,4 @@ class Square(Rectangle):
         self.__size = self._Rectangle__width = self._Rectangle__height = size
 
     def area(self):
-        return self.__size ** 2
+        return (self.__size ** 2)
