@@ -8,6 +8,8 @@ def pascal_triangle(n):
     """This function returns a list of lists
     of integers representing the Pascal’s triangle of n:
     """
+    if n <= 0:
+	    return lista
 
     lista = [[1], [1, 1]]
     for i in range(1, n):
