@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This is module 5-to_json_string
-This module contains one function `to_json_string`
+This module is from task 5
 """
 
 import json
