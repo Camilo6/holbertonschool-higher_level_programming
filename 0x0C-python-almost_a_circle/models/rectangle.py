@@ -65,16 +65,6 @@ class Rectangle(Base):
     def area(self):
         return (self.__width * self.__height)
 
-    def display(self):
-        print('\n' * self.__y, end="")
-        for i in range(self.__height):
-            print(' ' * self.__x, end='')
-            for j in range(self.__width):
-                if j != self.__width - 1:
-                    print('#', end="")
-                else:
-                    print("#")
-
     def __str__(self):
         return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
                                                 self.id, self.__x, self.__y,
