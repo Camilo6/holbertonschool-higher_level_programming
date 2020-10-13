@@ -2,9 +2,6 @@
 """class base"""
 
 
-import json
-
-
 class Base:
     __nb_objects = 0
 
