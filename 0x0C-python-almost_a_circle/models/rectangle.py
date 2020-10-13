@@ -1,32 +1,22 @@
 #!/usr/bin/python3
-"""Subclass rectangle"""
+'''rectangle module'''
+
+
 from models.base import Base
 
 
 class Rectangle(Base):
-    """This subclass inherits from Base"""
+    '''class rectangle'''
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-
-    @property
-    def height(self):
-        return self.__height
+        super().__init__(id)
 
     @property
     def width(self):
         return self.__width
-
-    @property
-    def x(self):
-        return self.__x
-
-    @property
-    def y(self):
-        return self.__y
 
     @width.setter
     def width(self, value):
@@ -36,6 +26,10 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
+    @property
+    def height(self):
+        return self.__height
+
     @height.setter
     def height(self, value):
         if type(value) is not int:
@@ -44,6 +38,10 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
+    @property
+    def x(self):
+        return self.__x
+
     @x.setter
     def x(self, value):
         if type(value) is not int:
@@ -51,6 +49,10 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
+
+    @property
+    def y(self):
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -80,17 +82,17 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         if args:
-            for i in range(len(args)):
-                if i == 0:
-                    self.id = args[i]
-                if i == 1:
-                    self.__width = args[i]
-                if i == 2:
-                    self.__height = args[i]
-                if i == 3:
-                    self.__x = args[i]
-                if i == 4:
-                    self.__y = args[i]
+            for arg in range(len(args)):
+                if arg == 0:
+                    self.id = args[arg]
+                if arg == 1:
+                    self.__width = args[arg]
+                if arg == 2:
+                    self.__height = args[arg]
+                if arg == 3:
+                    self.__x = args[arg]
+                if arg == 4:
+                    self.__y = args[arg]
         else:
             if 'id' in kwargs:
                 self.id = kwargs['id']
@@ -105,9 +107,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         new_dict = {}
+        new_dict['id'] = self.id
+        new_dict['width'] = self.width
+        new_dict['height'] = self.height
         new_dict['x'] = self.x
         new_dict['y'] = self.y
-        new_dict['id'] = self.id
-        new_dict['height'] = self.height
-        new_dict['width'] = self.width
         return new_dict
