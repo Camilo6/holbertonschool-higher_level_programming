@@ -12,6 +12,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
     @property
     def height(self):
         """height getter"""
@@ -78,9 +79,9 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        return("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
-                .format(self.id, self.__x, self.__y,
-                self.__width, self.__height))
+        return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                self.id, self.__x, self.__y,
+                                                self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         if args:
