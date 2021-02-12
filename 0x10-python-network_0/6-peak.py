@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-""" Test function find_peak """
+"""find peak in a list of unsorted integers"""
+
+
+def peak_finder(int_list, start, fin):
+    """this usese recurrsion to find peak"""
+    if start == fin:
+        return int_list[start]
+    mid = (fin + start) // 2
+    if int_list[mid] < int_list[mid + 1]:
+        return peak_finder(int_list, mid + 1, fin)
+    return peak_finder(int_list, start, mid)
+
+
 def find_peak(list_of_integers):
+    """this function find the peak"""
     if not list_of_integers:
-        return None
-    length = len(list_of_integers)
-    if length == 1 or length == 2:
-        if length == 2:
-            if list_of_integers[0] > list_of_integers[1]:
-                return list_of_integers[0]
-            else:
-                return list_of_integers[1]
-    arr = list_of_integers
-    peak = arr[0]
-    for i in range(len(arr)):
-        if arr[i+1] > arr[i]:
-            peak = arr[i+1]
-        return peak
+        return
+    return peak_finder(list_of_integers, 0, len(list_of_integers) - 1)
