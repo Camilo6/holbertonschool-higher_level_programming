@@ -1,6 +1,5 @@
-#!/bin/bash/python3
-
-""" Function find_peak """
+#!/usr/bin/python3
+""" Test function find_peak """
 def find_peak(list_of_integers):
     if not list_of_integers:
         return None
